@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+ Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
+-->
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="beans.xsd">
+
+	<bean class="de.hybris.platform.commercefacades.product.data.ProductData">
+		<property name="genders" type="java.util.List&lt;de.hybris.trainingShirisha.facades.product.data.GenderData>"/>
+        <property name="manufactureDetails" type="java.util.List&lt;de.hybris.trainingShirisha.facades.product.data.ManufactureDetailsData>"/>
+		<property name="isNewProduct" type="java.lang.Boolean"/>
+	</bean>
+
+	<bean class="de.hybris.platform.commercefacades.user.data.CustomerData">
+		<property name="isNewCustomer" type="java.lang.Boolean"/>
+
+	</bean>
+
+	<bean class="de.hybris.trainingShirisha.facades.product.data.GenderData">
+		<property name="code" type="String"/>
+		<property name="name" type="String"/>
+	</bean>
+
+	<bean class="de.hybris.trainingShirisha.facades.product.data.ManufactureDetailsData">
+		<property name="id" type="Integer"/>
+		<property name="name" type="String"/>
+		<property name="country" type="de.hybris.platform.commercefacades.user.data.CountryData"/>
+	</bean>
+
+	<bean class="de.hybris.trainingShirisha.facades.product.data.CustomerDetailsData">
+		<property name="id" type="Integer"/>
+		<property name="name" type="String"/>
+		<property name="phoneNumber" type="String"/>
+		<property name="customerCreatedTime" type="java.util.Date"/>
+		<property name="isNewCustomer" type="Boolean"/>
+	</bean>
+
+	<enum class="de.hybris.platform.commercefacades.product.ProductOption">
+		<value>ManufactureDetails</value>
+	</enum>
+	<bean class="de.hybris.platform.commercefacades.user.data.RegisterData">
+		<property name="isNewBusinessUser" type="Boolean"/>
+	</bean>
+</beans>
